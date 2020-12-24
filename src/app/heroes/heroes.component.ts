@@ -8,6 +8,8 @@ import { HEROES } from '../mock-heroes';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit, OnDestroy {
+selectedHero:Hero;
+ 
   hero:Hero = {
     id : 1,
     name : "Windstorm"
@@ -15,7 +17,7 @@ export class HeroesComponent implements OnInit, OnDestroy {
 
     heroes:Hero []= HEROES;
   constructor() { }
-
+ 
   ngOnInit(): void {
   }
 
@@ -24,6 +26,11 @@ export class HeroesComponent implements OnInit, OnDestroy {
 
   onChange(event){
     console.log(event.target.value)
+  }
+
+  onSelect(hero:Hero){
+    this.selectedHero = hero;
+
   }
 
 }
