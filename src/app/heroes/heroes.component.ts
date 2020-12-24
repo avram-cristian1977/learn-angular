@@ -1,5 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { nextTick } from 'process';
 import { Hero } from '../hero.interface';
+import { HeroService } from '../hero.service';
 import { HEROES } from '../mock-heroes';
 
 @Component({
@@ -10,25 +12,22 @@ import { HEROES } from '../mock-heroes';
 export class HeroesComponent implements OnInit, OnDestroy {
 selectedHero:Hero;
  
-  hero:Hero = {
-    id : 1,
-    name : "Windstorm"
-    };
-
-    heroes:Hero []= HEROES;
-  constructor() { }
+ 
+  heroes:Hero [];
+  constructor(private heroService : HeroService) { }
  
   ngOnInit(): void {
+    this.getHeroes();
   }
 
   ngOnDestroy() {
   }
 
-  onChange(event){
-    console.log(event.target.value)
+  getHeroes():void{
+    this.heroService.getHeroes().subscribe( heroes => this.heroes = heroes)
+    
   }
-
-  onSelect(hero:Hero){
+    onSelect(hero:Hero){
     this.selectedHero = hero;
 
   }
