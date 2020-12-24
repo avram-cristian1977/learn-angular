@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { nextTick } from 'process';
 import { Hero } from '../hero.interface';
 import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service';
 import { HEROES } from '../mock-heroes';
 
 @Component({
@@ -14,7 +15,7 @@ selectedHero:Hero;
  
  
   heroes:Hero [];
-  constructor(private heroService : HeroService) { }
+  constructor(private heroService : HeroService, private messageService:MessageService) { }
  
   ngOnInit(): void {
     this.getHeroes();
@@ -29,6 +30,7 @@ selectedHero:Hero;
   }
     onSelect(hero:Hero){
     this.selectedHero = hero;
+    this.messageService.add(`you had selected hero id ${hero.id}`)
 
   }
 
