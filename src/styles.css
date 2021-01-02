@@ -25,7 +25,17 @@ app-heroes > div > h2{
     justify-content: center;
 }
 
+app-hero-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+app-messages > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 app-heroes-list > div > button  {
     padding: 3px;
