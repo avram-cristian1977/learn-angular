@@ -11,10 +11,11 @@ import { HEROES } from '../mock-heroes';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit, OnDestroy {
-selectedHero:Hero;
+
  
  
   heroes:Hero [];
+  selectedHero:Hero;
   constructor(private heroService : HeroService, private messageService:MessageService) { }
  
   ngOnInit(): void {

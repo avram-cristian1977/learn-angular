@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files*/ 
+app-root > div{
+    display: flex;
+}
+app-heroes {
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 66%;
+}
+
+#title {
+    display: flex;
+    justify-content:center;
+}
+
+app-heroes > div{
+    background-color: darkblue;
+    display: inline-block;
+}
+
+app-heroes > div > h2{
+    
+    display: flex;
+    justify-content: center;
+}
+
+app-hero-detail {
+    background-color: darkkhaki;
+}
+
+.red{
+    background-color: #ff3f34;
+}
+
+.yellow{
+    background-color: #ffd32a;
+}
+
+.green{
+    background-color: #05c46b;
+}
+
+.blue{
+    background-color: #3c40c6;
+}
+
+.displayNone{
+    display: none;
+}
