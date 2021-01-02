@@ -31,7 +31,7 @@ export class HeroesComponent implements OnInit, OnDestroy {
   }
     onSelect(hero:Hero){
     this.selectedHero = hero;
-    this.messageService.add(`you had selected hero id ${hero.id}`)
+    this.messageService.add(`You had selected hero id ${hero.id}`)
 
   }
 

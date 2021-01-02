@@ -12,7 +12,7 @@ export class HeroService {
   constructor(private messageService : MessageService) { }
 
   getHeroes(): Observable< Hero[]>{
-    this.messageService.add("HeroeService: heroes  been fetched")
+    this.messageService.add("Hero Service: Heroes have been fetched!!!")
     return of (HEROES);
 
   }

@@ -1,38 +1,49 @@
 <div *ngIf="hero">
-    <div>Combat : {{hero.powerStats.combat}}</div>
+    <div class="combat">
+    <div>Natural Combat : {{hero.powerStats.combat}}</div>
     <span>
-        <label>Combat:
+        <label>Gene Modification / Mutate:
           <input type="number" [(ngModel)]="hero.powerStats.combat" placeholder="Combat"/>
-          <div *ngIf="hero.powerStats.combat > 10 || hero.powerStats.combat <1 ">Please insert a value between 1 and 10!</div>
+          <div *ngIf="hero.powerStats.combat > 10 || hero.powerStats.combat <1 ">Mutation value between 1 and 10!</div>
         </label>
     </span>
-    <div>Speed : {{hero.powerStats.speed}}</div>
+  </div>
+  <div class="speed">
+    <div>Natural Speed : {{hero.powerStats.speed}}</div>
     <span>
-        <label>Speed:
+        <label>Gene Modification / Mutate:
           <input type="number" [(ngModel)]="hero.powerStats.speed" placeholder="Speed"/>
-          <div *ngIf="hero.powerStats.speed > 10 || hero.powerStats.speed <1 ">Please insert a value between 1 and 10!</div>
+          <div *ngIf="hero.powerStats.speed > 10 || hero.powerStats.speed <1 ">Mutation value between 1 and 10!</div>
           
         </label>
     </span>
-    <div>Intelligence : {{hero.powerStats.intelligence}}</div>
+  </div>
+
+  <div class="intelligence">
+    <div>Natural Intelligence / Mutate : {{hero.powerStats.intelligence}}</div>
     <span>
-        <label>Intelligence:
+        <label>Gene Modification:
           <input type="number" [(ngModel)]="hero.powerStats.intelligence" placeholder="Intelligence"/>
-          <div *ngIf="hero.powerStats.intelligence > 10 || hero.powerStats.intelligence < 1 ">Please insert a value between 1 and 10!</div>
+          <div *ngIf="hero.powerStats.intelligence > 10 || hero.powerStats.intelligence < 1 ">Mutation value between 1 and 10!</div>
         </label>
     </span>
-    <div>Strenght : {{hero.powerStats.strength}}</div>
+  </div>
+  <div class="strength"> 
+    <div>Natural Strenght / Mutate : {{hero.powerStats.strength}}</div>
     <span>
-        <label>Strength:
+        <label>Gene Modification:
           <input type="number" [(ngModel)]="hero.powerStats.strength" placeholder="Strength"/>
-          <div *ngIf="hero.powerStats.strength > 10 || hero.powerStats.strength <1">Please insert a value between 1 and 10!</div>
+          <div *ngIf="hero.powerStats.strength > 10 || hero.powerStats.strength <1">Mutation value between 1 and 10!</div>
         </label>
     </span>
-    
+  </div>
+    <div class="overall">
+      <div>Overall Rating</div>
     <div [ngClass]="{
         'red': hero.overAllRating(hero.powerStats) > 0 && hero.overAllRating(hero.powerStats) <= 10,
         'yellow' : hero.overAllRating(hero.powerStats) > 10 && hero.overAllRating(hero.powerStats) <= 20,
         'green' : hero.overAllRating(hero.powerStats) > 20 && hero.overAllRating(hero.powerStats) <= 30,
         'blue' : hero.overAllRating(hero.powerStats) > 30 && hero.overAllRating(hero.powerStats) <= 40
-}"><span> Hero Overall : {{hero.overAllRating(hero.powerStats)}} </span></div>
+}"><span>  {{hero.overAllRating(hero.powerStats)}} </span></div>
+</div>
 </div>
