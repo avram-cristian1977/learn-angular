@@ -8,3 +8,11 @@
     <div *ngFor='let message of messageService.messages'> {{message}} </div>
   
   </div>
+
+  <h2>Provided Over All Rating</h2>
+
+  <div *ngIf="overAllR">
+          <ul >
+                  <li *ngFor="let item of overAllR ">{{item.name}}'s over all rating is: {{item.overAllRating(item.powerStats)}}</li>
+          </ul>
+  </div>

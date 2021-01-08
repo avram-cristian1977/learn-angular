@@ -1,9 +1,10 @@
-h2 {
-    color:wheat;
+*{
+    color: wheat;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
-    
 }
+
+
+
 
 button.clear {
     font-family: Arial, Helvetica, sans-serif;
@@ -21,11 +22,12 @@ button:hover{
     background-color: darkseagreen;
 }
 
-
-
-div > div{color: wheat;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+div > ul > li{
+    list-style-type:none
 }
+
+
+
 
 /* display: inline-block;
     font-size: small;
@@ -38,3 +40,8 @@ div > div{color: wheat;
     margin-right: 5px;
     border-radius:  0 4px 4px  0;
     width:60px; */
+
+
+  
+
+   
