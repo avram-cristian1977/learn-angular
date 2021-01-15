@@ -8,6 +8,8 @@ import { Hero } from '../hero.interface';
 })
 export class HeroOverallRatingComponent implements OnInit {
   @Input() hero:Hero;
+  myImage2:string='assets/images/7.png'
+
   constructor() { }
 
   ngOnInit(): void {

@@ -8,4 +8,5 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
+  myImage:string = "assets/images/1.png"
 }

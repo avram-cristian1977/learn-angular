@@ -5,6 +5,8 @@ import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
 import { HEROES } from '../mock-heroes';
 
+
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -12,12 +14,15 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent implements OnInit, OnDestroy {
 
- 
- 
-  heroes:Hero [];
-  selectedHero:Hero;
-  constructor(private heroService : HeroService, private messageService:MessageService) { }
- 
+
+
+  heroes: Hero[];
+  // selectedHero:Hero;
+  constructor(private heroService: HeroService,
+              private messageService: MessageService) { }
+
+
+
   ngOnInit(): void {
     this.getHeroes();
   }
@@ -25,14 +30,20 @@ export class HeroesComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
   }
 
-  getHeroes():void{
-    this.heroService.getHeroes().subscribe( heroes => this.heroes = heroes)
-    
-  }
-    onSelect(hero:Hero){
-    this.selectedHero = hero;
-    this.messageService.add(`You had selected hero id ${hero.id}`)
+  getHeroes(): void {
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes)
 
   }
+
+
+
+
+
+  //   onSelect(hero:Hero){
+  //   this.selectedHero = hero;
+  //   this.heroService.selectedHero$.next(this.selectedHero);
+  //   this.messageService.add(`You had selected hero id ${hero.id}`)
+
+  // }
 
 }

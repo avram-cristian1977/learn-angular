@@ -1,18 +1,27 @@
-
-
 <div *ngIf="messageService.messages.length">
 
-    <h2>Messages</h2>
-    <button class="clear"
-            (click)="messageService.clear()">clear</button>
-    <div *ngFor='let message of messageService.messages'> {{message}} </div>
-  
+  <h2>Messages</h2>
+
+  <button class="clear" (click)="messageService.clear()">clear</button>
+  <h6>Scroll through the messages</h6>
+  <div class="messagesContainer">
+
+    <div style="padding-left: 10px; padding-left: 5px;" *ngFor='let message of messageService.messages'> {{message}} </div>
   </div>
 
-  <h2>Provided Over All Rating</h2>
+</div>
 
-  <div *ngIf="overAllR">
-          <ul >
-                  <li *ngFor="let item of overAllR ">{{item.name}}'s over all rating is: {{item.overAllRating(item.powerStats)}}</li>
-          </ul>
-  </div>
+<h2>Provided Over All Rating</h2>
+
+<div *ngIf="overAllR">
+  <ul>
+    <li *ngFor="let item of overAllR ">{{item.name}}'s over all rating is: {{item.overAllRating(item.powerStats)}}</li>
+  </ul>
+</div>
+
+<!-- <button style="color: black;" (click)="logSelectedHero()">Show current hero seletion</button>
+
+<div *ngIf = "hero">
+  <h4>Hero by BS</h4>
+  <h3>{{hero.name}}</h3>
+</div> -->

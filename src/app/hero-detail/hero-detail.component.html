@@ -1,14 +1,15 @@
-<h2>Hero details</h2>
-<div *ngIf="hero">
-    <h3>{{hero.name | uppercase}} Details</h3>
-    <div><span>hero's id: </span>{{hero.id}}</div>
-    <div>
-        <label>name:
-            <input [(ngModel)] = "hero.name" placeholder = "name">
-        </label>
-    </div>
-   
-</div>
+<button (click)="goBack()">Go Back</button>
 
-<app-hero-overall-rating [hero] = "hero"></app-hero-overall-rating>
-<app-heroes-list [hero] = "hero"></app-heroes-list>
+<h2 (click)=" getSelectedHero()">{{hero.name}} details</h2>
+
+<!-- <div *ngIf="hero">
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+  </div>
+</div> -->
+
+
+
+<app-hero-overall-rating [hero]="hero"></app-hero-overall-rating>
