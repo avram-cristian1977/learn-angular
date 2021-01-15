@@ -78,7 +78,7 @@ app-heroes {
 #title {
     display: flex;
     justify-content:center;
-    color:wheat
+    color:silver;
 }
 
 app-heroes > div{
@@ -111,18 +111,18 @@ app-heroes-list > div > button  {
     
    border: none;
    border-radius: 0 4px  4px 0;
-   background-color: tomato;
+   background-color: silver;
    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-   color: wheat;
+   color: black;
    font-size: 16px;
     
 }
 app-heroes-list > div > button > span {
     display: inline-block;
     font-size: small;
-    color:wheat;
+    color:black;
     padding:  8px;
-    background-color:#80120f;
+    background-color:grey;
     line-height: 1em;
    
    
