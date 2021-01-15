@@ -2,20 +2,24 @@
   <div class="star-five"></div>
   <h1 id="title">{{title}}</h1>
   <div class="star-five"></div>
-
 </div>
 
 <nav>
-<a style="transform: rotate(-15deg);" routerLink="/dashboard">Dashboard  </a>  
+
+  <a style="transform: rotate(-15deg);" routerLink="/dashboard">Dashboard </a>
+  <a routerLink="/home">Home </a>
+
   <a style="transform: rotate(15deg);" routerLink="/heroes">Heroes</a>
-  
 </nav>
 
+
+
 <div style="margin-top: 10px;">
+
   <img [src]="myImage" alt="" width="250">
+
 </div>
 
 <div>
   <router-outlet></router-outlet>
-  
 </div>
