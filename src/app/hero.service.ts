@@ -8,8 +8,11 @@ import { MessageService } from './message.service';
   providedIn: 'root'
 })
 export class HeroService  {
-
+  
+  hero:Hero;
   selectedHero$=new BehaviorSubject<Hero>(null)
+
+  
 
   constructor(private messageService : MessageService) { }
 
@@ -34,6 +37,12 @@ export class HeroService  {
   updateSelectedHero(id:number){
     this.selectedHero$.next(HEROES.find(hero => hero.id === id ));
     this.messageService.add(`Hero Service: fetched hero id=${id}`);
+    
+    
 
   }
+
+ 
+
+  
 }

@@ -12,10 +12,10 @@ const routes: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: '**',component: PageNotFoundComponent}
-  // { path: '', component: AppComponent }
+  
 ];
 
 @NgModule({

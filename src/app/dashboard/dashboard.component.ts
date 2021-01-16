@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { from } from 'rxjs';
+import { from, Subscription } from 'rxjs';
 import { Hero } from '../hero.interface';
 import { HeroService } from '../hero.service';
 import { HEROES } from '../mock-heroes';
@@ -15,14 +15,23 @@ export class DashboardComponent implements OnInit {
   myImage3:string='assets/images/11.png'
  
   heroes: Hero[] = [];
+  hero:Hero;
+  clicked : boolean;
+
   
 
   // constructor(private heroService: HeroService) { }
 
   ngOnInit() {
      this.top5();
+     console.log(this.heroes,"top5")
     //this.getHeroes()
+    
   }
+
+  onClick() {
+    this.clicked= !this.clicked;
+}
 
  
 
@@ -33,8 +42,10 @@ export class DashboardComponent implements OnInit {
     } ).slice(0,5)
   }
 
+
+
  
-  //cum folosesc serviciul care aduce eroi impreuna cu functia de sortare din heroes-list?
+ 
 
   // getHeroes(){
   //   this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes)

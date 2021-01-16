@@ -3,17 +3,20 @@
     <img [src]="myImage3" alt="" width="50">
   </div>
   Top Five Heroes
+  
   <div  >
     <img [src]="myImage3" alt="" width="50" style="-webkit-transform: scaleX(-1);
     transform: scaleX(-1);">
   </div>
 </h2>
 
-<div class="grid grid-pad">
-    <a *ngFor="let hero of heroes" class="col-1-4"
-    routerLink="/detail/{{hero.id}}">
+
+<div class="grid grid-pad" >
+    <a *ngFor="let hero of heroes" class="col-1-4" routerLink="/detail/{{hero.id}}">
   <div class="module hero">
+    <h6>Power Rating {{hero.overAllRating(hero.powerStats)}}</h6>
     <h4>{{hero.name}}</h4>
+    
   </div>
 </a>
 </div>
